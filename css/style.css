@@ -213,6 +213,7 @@ html {
 	border-top: .375em solid #8ec641;
 }
 body {
+	background-color: #fff !important;
 	margin: 0 auto;
 	max-width: 1040px;
 	width: 80%;
@@ -275,18 +276,10 @@ header[role="banner"] {
 	margin-bottom: 1.5em;
 }
 .map {
-	border-radius: .375em;
 	height: 21em;
 	overflow: hidden;
 	width: 100%;
 	vertical-align: top;
-}
-#firstHeading {
-	font-size: 1em;
-	font-weight: bold;
-	line-height: 54px;
-	margin-bottom: 0;
-	text-align: center;
 }
 
 /* Footer */
@@ -330,7 +323,6 @@ dt:after {
 dt:before {
     background: #222;
     background: hsla(0,0%,0%,.85);
-    border-radius: 5px;
     color: #f6f6f6;
     display: none;
     font-family: museo-sans, sans-serif;
