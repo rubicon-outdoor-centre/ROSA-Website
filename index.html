@@ -47,7 +47,7 @@
 		<p>With 6 campuses across the state, the ROSA schools provide affordable high quality educational programs for DEECD schools that empower their students to develop beliefs, values, attitudes and behaviours that will lead to sustainable living. Students achieve success through a unique personalised learning journey and within a small community living in a healthy, happy and safe environment.</p>
 </div>
 
-<div class="content divider" role="main">
+<div class="content" role="main">
 	<h2 class="divider">ROSA Schools Directory</h2>
 
 	<div class="divider">
@@ -72,6 +72,7 @@
 					<dt class="web">Web:</dt>
 					<dd><a href="http://www.boec.vic.edu.au" target="_blank">www.boec.vic.edu.au</a></dd>
 				</dl>
+				<iframe class="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=692+Benalla-Whitfield+Road+Greta+South,Victoria,Australia&key=AIzaSyAlgnVcl23J8fNhxB8SVGiFGCpXhwtAojY&zoom=11"></iframe>
 			</li><!--
 		 --><li class="column">
 				<h5><a href="http://www.boec.vic.edu.au" target="_blank">Bogong Campus</a></h5>
@@ -86,6 +87,7 @@
 					<dt class="web">Web:</dt>
 					<dd><a href="http://www.boec.vic.edu.au" target="_blank">www.boec.vic.edu.au</a></dd>
 				</dl>
+				<iframe class="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=1+Black+Possum+Rd,Bogong,Victoria,Australia&key=AIzaSyAlgnVcl23J8fNhxB8SVGiFGCpXhwtAojY&zoom=11"></iframe>
 			</li>
 		</ul>
 	</div>
@@ -112,6 +114,7 @@
 					<dt class="web">Web:</dt>
 					<dd><a href="http://www.rubicon.vic.edu.au/nayook/campus" target="_blank">www.rubicon.vic.edu.au/nayook/campus</a></dd>
 				</dl>
+				<iframe class="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=530+Nayook-Powelltown+Road,Nayook,Victoria,Australia&key=AIzaSyAlgnVcl23J8fNhxB8SVGiFGCpXhwtAojY&zoom=11"></iframe>
 			</li><!--
 		 --><li class="column">
 				<h5><a href="http://www.rubicon.vic.edu.au/rubicon/campus" target="_blank">Thornton Campus</a></h5>
@@ -126,11 +129,12 @@
 					<dt class="web">Web:</dt>
 					<dd><a href="http://www.rubicon.vic.edu.au/rubicon/campus" target="_blank">www.rubicon.vic.edu.au/rubicon/campus</a></dd>
 				</dl>
+				<iframe class="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=264+Rubicon+Road,Thornton,Victoria,Australia&key=AIzaSyAlgnVcl23J8fNhxB8SVGiFGCpXhwtAojY&zoom=11"></iframe>
 			</li>
 		</ul>
 	</div>
 
-	<div>
+	<div class="divider">
 		<header>
 			<hgroup>
 				<h3><a href="http://www.somerscamp.vic.edu.au" target="_blank">Somers School Camp</a></h3>
@@ -152,6 +156,7 @@
 					<dt class="web">Web:</dt>
 					<dd><a href="http://www.somerscamp.vic.edu.au" target="_blank">www.somerscamp.vic.edu.au</a></dd>
 				</dl>
+				<iframe class="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Lord+Somers+Road,Somers,Victoria,Australia&key=AIzaSyAlgnVcl23J8fNhxB8SVGiFGCpXhwtAojY&zoom=11"></iframe>
 			</li><!--
 		 --><li class="column">
 				<h5><a href="http://www.woorabinda.vic.edu.au" target="_blank">Woorabinda Campus</a></h5>
@@ -166,176 +171,66 @@
 					<dt class="web">Web:</dt>
 					<dd><a href="http://www.woorabinda.vic.edu.au" target="_blank">www.woorabinda.vic.edu.au</a></dd>
 				</dl>
+				<iframe class="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Fernlea+Road,Yallourn+North,Victoria,Australia&key=AIzaSyAlgnVcl23J8fNhxB8SVGiFGCpXhwtAojY&zoom=11"></iframe>
 			</li>
 		</ul>
 	</div>
-	<div id="map_canvas"></div>
-	<p class="maplink"><a href="http://maps.google.com.au/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=117152054594375429348.000487168ef037f58f305&amp;ll=-37.544577,146.535645&amp;spn=3.048645,9.887695&amp;z=7&amp;source=embed">View locations on a larger map</a></p>
 </div>
 
 <footer role="contentinfo">
 	<a href="http://www.education.vic.gov.au/"><img src="images/deecd.jpg" alt="Victoria Logo"></a>
-	<p>&copy; 2011&ndash;2014 ROSA</p>
+	<p>&copy; 2011&ndash;<script>document.write(new Date().getFullYear())</script> ROSA</p>
 </footer>
 
 </body>
 
 <script>
-$( document ).ready(function() {
+	$( document ).ready(function() {
 
-	$(window).resize( function() {
+		$(window).resize( function() {
 
-		if($(window).width() > 900) {
+			if($(window).width() > 900) {
 
-			var $school = $('.content ul');
+				var $school = $('.content ul');
 
-			$school.each( function() {
+				$school.each( function() {
 
-				var $campus = $(this).find('p'),
-					campusHeight = 0;
+					var $campus = $(this).find('p'),
+						campusHeight = 0;
+
+					$campus.each( function() {
+
+						$(this).removeAttr('style');
+
+						if($(this).height() > campusHeight) {
+
+							campusHeight = $(this).height();
+						}
+					});
+
+					$campus.height(campusHeight);
+				});
+
+			} else {
+
+				var $campus = $('.content li');
 
 				$campus.each( function() {
 
-					$(this).removeAttr('style');
-
-					if($(this).height() > campusHeight) {
-
-						campusHeight = $(this).height();
-					}
+					$(this).find('p').removeAttr('style');
 				});
 
-				$campus.height(campusHeight);
-			});
+			}
 
-		} else {
+		}).trigger('resize');
 
-			var $campus = $('.content li');
+		var $dd = $('dd');
 
-			$campus.each( function() {
+		$dd.hover( function() {
 
-				$(this).find('p').removeAttr('style');
-			});
-
-		}
-
-	}).trigger('resize');
-
-	var $dd = $('dd');
-
-	$dd.hover( function() {
-
-		$(this).prev('dt').toggleClass('hovered');
+			$(this).prev('dt').toggleClass('hovered');
+		});
 	});
-});
-</script>
-
-<script>
-	function initialize() {
-
-		var myOptions = {
-			zoom: 7,
-			center: new google.maps.LatLng(-37.395291, 146.222048),
-			mapTypeId: google.maps.MapTypeId.TERRAIN
-		}
-
-		var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
-
-		var infowindow = new google.maps.InfoWindow();
-
-		// 15 Mile Creek
-		var contentStringF = '<div id="content">'+
-							 '<h1 id="firstHeading" class="firstHeading">15 Mile Creek Campus</h1>'+
-							 '</div>';
-		var markerF = new google.maps.Marker({
-			position: new google.maps.LatLng(-36.672756, 146.262081),
-			map: map,
-			title:"15 Mile Creek Campus"
-		});
-		google.maps.event.addListener(markerF, 'click', function() {
-			infowindow.setContent(contentStringF);
-			infowindow.open(map,markerF);
-		});
-
-		// Bogong
-		var contentStringB = '<div id="content">'+
-							 '<h1 id="firstHeading" class="firstHeading">Bogong Campus</h1>'+
-							 '</div>';
-		var markerB = new google.maps.Marker({
-			position: new google.maps.LatLng(-36.80407, 147.225648),
-			map: map,
-			title:"Bogong Campus"
-		});
-		google.maps.event.addListener(markerB, 'click', function() {
-			infowindow.setContent(contentStringB);
-			infowindow.open(map,markerB);
-		});
-
-		// Nayook
-		var contentStringN = '<div id="content">'+
-							 '<h1 id="firstHeading" class="firstHeading">Nayook Campus</h1>'+
-							 '</div>';
-		var markerN = new google.maps.Marker({
-			position: new google.maps.LatLng(-37.898808, 145.916387),
-			map: map,
-			title:"Nayook Campus"
-		});
-		google.maps.event.addListener(markerN, 'click', function() {
-			infowindow.setContent(contentStringN);
-			infowindow.open(map,markerN);
-		});
-
-		// Thornton
-		var contentStringR = '<div id="content">'+
-							 '<h1 id="firstHeading" class="firstHeading">Thornton Campus</h1>'+
-							 '</div>';
-		var markerR = new google.maps.Marker({
-			position: new google.maps.LatLng(-37.295291, 145.822048),
-			map: map,
-			title:"Thornton Campus"
-		});
-		google.maps.event.addListener(markerR, 'click', function() {
-			infowindow.setContent(contentStringR);
-			infowindow.open(map,markerR);
-		});
-
-		// Somers
-		var contentStringS = '<div id="content">'+
-							 '<h1 id="firstHeading" class="firstHeading">Somers Campus</h1>'+
-							 '</div>';
-		var markerS = new google.maps.Marker({
-			position: new google.maps.LatLng(-38.290038, 145.075364),
-			map: map,
-			title:"Somers Campus"
-		});
-		google.maps.event.addListener(markerS, 'click', function() {
-			infowindow.setContent(contentStringS);
-			infowindow.open(map,markerS);
-		});
-
-		// Woorabinda
-		var contentStringW = '<div id="content">'+
-							 '<h1 id="firstHeading" class="firstHeading">Woorabinda Campus</h1>'+
-							 '</div>';
-		var markerW = new google.maps.Marker({
-			position: new google.maps.LatLng(-38.15582, 146.31448),
-			map: map,
-			title:"Woorabinda Campus"
-		});
-		google.maps.event.addListener(markerW, 'click', function() {
-			infowindow.setContent(contentStringW);
-			infowindow.open(map,markerW);
-		});
-
-	}
-
-	function loadScript() {
-		var script = document.createElement("script");
-		script.type = "text/javascript";
-		script.src = "http://maps.googleapis.com/maps/api/js?key=AIzaSyAlgnVcl23J8fNhxB8SVGiFGCpXhwtAojY&sensor=false&callback=initialize";
-		document.body.appendChild(script);
-	}
-
-	window.onload = loadScript;
 </script>
 
 </html>
