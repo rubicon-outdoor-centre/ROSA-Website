@@ -212,7 +212,7 @@ footer[role="contentinfo"] p {
 /* Layout **********************************************************************************************************************************/
 
 html {
-	border-bottom: .75em solid #666;
+	border-bottom: .375em solid #d6d6d6;
 	border-top: .375em solid #8ec641;
 }
 body {
