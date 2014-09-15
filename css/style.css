@@ -89,11 +89,7 @@ header[role="banner"] h2 {
 	font-weight: bold;
 	letter-spacing: 3px;
 	line-height: 3em;
-<<<<<<< HEAD
 	margin-bottom: 3em;
-=======
-	margin-bottom: 1.5em;
->>>>>>> a9fe2c48d4bfd497ec2cad1f4cbe174fb3133711
 	padding: .375em 2.25em;
 	text-align: center;
 	text-transform: uppercase;
@@ -205,7 +201,6 @@ dl {
 	margin-bottom: 3em;
 	text-align: center;
 }
-<<<<<<< HEAD
 #map_canvas {
 	background-color: #aaa;
 	border-top: 1px solid #aaa;
@@ -215,8 +210,6 @@ dl {
 #map_canvas img {
 	max-width: none;
 }
-=======
->>>>>>> a9fe2c48d4bfd497ec2cad1f4cbe174fb3133711
 footer[role="contentinfo"] p {
 	color: #666;
 	float: right;
@@ -228,12 +221,7 @@ footer[role="contentinfo"] p {
 /* Layout **********************************************************************************************************************************/
 
 html {
-<<<<<<< HEAD
 	border-top: .1875em solid #8ec641;
-=======
-	border-bottom: .375em solid #d6d6d6;
-	border-top: .375em solid #8ec641;
->>>>>>> a9fe2c48d4bfd497ec2cad1f4cbe174fb3133711
 }
 body {
 	background-color: #fff !important;
@@ -346,10 +334,7 @@ dt:after {
 dt:before {
 	background: #222;
 	background: hsla(0,0%,0%,.85);
-<<<<<<< HEAD
 	border-radius: .25em;
-=======
->>>>>>> a9fe2c48d4bfd497ec2cad1f4cbe174fb3133711
 	color: #f6f6f6;
 	display: none;
 	font-family: museo-sans, sans-serif;
@@ -409,13 +394,10 @@ dt.hovered:before {
 		border: 0;
 		padding-left: 0;
 	}
-<<<<<<< HEAD
 	#map_canvas {
 		height: 400px;
 		width: 100%;
 	}
-=======
->>>>>>> a9fe2c48d4bfd497ec2cad1f4cbe174fb3133711
 }
 @media (max-width: 400px) {
 	html {
@@ -436,13 +418,10 @@ dt.hovered:before {
 		margin-top: 1.5em;
 		width: 100%;
 	}
-<<<<<<< HEAD
 	#map_canvas {
 		height: 250px;
 		width: 100%;
 	}
-=======
->>>>>>> a9fe2c48d4bfd497ec2cad1f4cbe174fb3133711
 }
 @media (max-width: 80em) {
 
