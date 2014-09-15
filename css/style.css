@@ -220,9 +220,6 @@ footer[role="contentinfo"] p {
 
 /* Layout **********************************************************************************************************************************/
 
-html {
-	border-top: .1875em solid #8ec641;
-}
 body {
 	background-color: #fff !important;
 }
