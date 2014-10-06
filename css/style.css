@@ -400,6 +400,15 @@ dt.hovered:before {
 		width: 100%;
 	}
 }
+@media (max-width: 600px) {
+	footer[role="contentinfo"] {
+		text-align: center;
+	}
+	footer[role="contentinfo"] p {
+		margin-top: 1.5em;
+		width: 100%;
+	}
+}
 @media (max-width: 400px) {
 	html {
 		font-size: 87.5%;
@@ -411,13 +420,6 @@ dt.hovered:before {
 		font-size: 1.2em;
 		line-height: 1.75em;
 		margin-bottom: 1.25em;
-	}
-	footer[role="contentinfo"] {
-		text-align: center;
-	}
-	footer[role="contentinfo"] p {
-		margin-top: 1.5em;
-		width: 100%;
 	}
 	#map_canvas {
 		height: 250px;
