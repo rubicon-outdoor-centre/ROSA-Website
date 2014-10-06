@@ -88,9 +88,9 @@ header[role="banner"] h2 {
 	font-size: 2em;
 	font-weight: bold;
 	letter-spacing: 3px;
-	line-height: 3em;
+	line-height: 1.5em;
 	margin-bottom: 3em;
-	padding: .375em 2.25em;
+	padding: 1.125em 2.25em;
 	text-align: center;
 	text-transform: uppercase;
 }
@@ -202,7 +202,7 @@ dl {
 	text-align: center;
 }
 #map_canvas {
-	background-color: #aaa;
+	background-color: #e5e3df;
 	border-top: 1px solid #aaa;
 	height: 500px;
 	margin-top: 0em;
@@ -284,6 +284,7 @@ body {
 	margin-bottom: 1.5em;
 }
 .map {
+	background-color: #e5e3df;
 	height: 21em;
 	overflow: hidden;
 	width: 100%;
