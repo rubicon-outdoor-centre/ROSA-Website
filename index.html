@@ -41,6 +41,11 @@
 		<h2>DEECD Residential Schools Providing Education Outdoors for P&ndash;12 Students</h2>
 		<h3>Canoeing &#8226; Cycling &#8226; Environmental Studies &#8226; High Ropes &#8226; Hiking &#8226; Horse Riding &#8226; Rock Climbing &#8226; Skiing &#8226; and more&hellip;</h3>
 	</hgroup>
+
+	<div class="limit-width">
+		<div id="map_canvas"></div>
+	</div>
+
 	<div class="banner-image">
 		<div class="description limit-width">
 			<p>With 6 campuses across the state, the ROSA schools provide affordable high quality educational programs for DEECD schools that empower their students to develop beliefs, values, attitudes and behaviours that will lead to sustainable living. Students achieve success through a unique personalised learning journey and within a small community living in a healthy, happy and safe environment.</p>
@@ -60,7 +65,7 @@
 		</header>
 
 		<ul>
-			<li class="column">
+			<li class="column" id="fifteenMileCreek">
 				<h5><a href="http://www.boec.vic.edu.au" target="_blank">15 Mile Creek Campus</a></h5>
 				<p>Located 220 km northeast of Melbourne and is nestled in a scenic rural valley in the foothills of the Great Dividing range. 110 hectares of unspoilt bush surrounds the campsite.</p>
 				<dl class="contact">
@@ -75,7 +80,7 @@
 				</dl>
 				<iframe class="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=692+Benalla-Whitfield+Road+Greta+South,Victoria,Australia&key=AIzaSyAlgnVcl23J8fNhxB8SVGiFGCpXhwtAojY&zoom=11"></iframe>
 			</li><!--
-		 --><li class="column">
+		 --><li class="column" id="bogong">
 				<h5><a href="http://www.boec.vic.edu.au" target="_blank">Bogong Campus</a></h5>
 				<p>Located in Bogong Village in North East Victoria, in the heart of the Victorian Alps and on the border of the Alpine National Park.</p>
 				<dl class="contact">
@@ -102,7 +107,7 @@
 		</header>
 
 		<ul>
-			<li class="column">
+			<li class="column" id="nayook">
 				<h5><a href="http://www.rubicon.vic.edu.au/nayook/campus" target="_blank">Nayook Campus</a></h5>
 				<p>Located within the magnificent rolling hills of Gippsland, 30 km north of Warragul.</p>
 				<dl class="contact">
@@ -117,7 +122,7 @@
 				</dl>
 				<iframe class="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=530+Nayook-Powelltown+Road,Nayook,Victoria,Australia&key=AIzaSyAlgnVcl23J8fNhxB8SVGiFGCpXhwtAojY&zoom=11"></iframe>
 			</li><!--
-		 --><li class="column">
+		 --><li class="column" id="thornton">
 				<h5><a href="http://www.rubicon.vic.edu.au/rubicon/campus" target="_blank">Thornton Campus</a></h5>
 				<p>Located approximately 130 km from Melbourne, situated next to the Rubicon River in the picturesque Rubicon Valley.</p>
 				<dl class="contact">
@@ -144,7 +149,7 @@
 		</header>
 
 		<ul>
-			<li class="column">
+			<li class="column" id="somers">
 				<h5><a href="http://www.somerscamp.vic.edu.au" target="_blank">Somers Campus</a></h5>
 				<p>Located on the shores of Westernport on the Mornington Peninsula south east of Melbourne.</p>
 				<dl class="contact">
@@ -159,7 +164,7 @@
 				</dl>
 				<iframe class="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=Lord+Somers+Road,Somers,Victoria,Australia&key=AIzaSyAlgnVcl23J8fNhxB8SVGiFGCpXhwtAojY&zoom=11"></iframe>
 			</li><!--
-		 --><li class="column">
+		 --><li class="column" id="woorabinda">
 				<h5><a href="http://www.woorabinda.vic.edu.au" target="_blank">Woorabinda Campus</a></h5>
 				<p>Located within natural bush land and magnificent views over Lake Narracan, Yallourn Nth La Trobe Valley, 150 km East of Melbourne.</p>
 				<dl class="contact">
@@ -184,11 +189,6 @@
 		<p>&copy; 2011&ndash;<script>document.write(new Date().getFullYear())</script><noscript>2014</noscript> ROSA</p>
 	</div>
 </footer>
-
-<div>
-	<div id="map_canvas"></div>
-	<!--<p class="maplink"><a href="http://maps.google.com.au/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=117152054594375429348.000487168ef037f58f305&amp;ll=-37.544577,146.535645&amp;spn=3.048645,9.887695&amp;z=7&amp;source=embed">View locations on a larger map</a></p>-->
-</div>
 
 </body>
 
@@ -256,87 +256,63 @@
 		var infowindow = new google.maps.InfoWindow();
 
 		// 15 Mile Creek
-		var contentStringF = '<div id="content">'+
-							 '<h1 id="firstHeading" class="firstHeading">15 Mile Creek Campus</h1>'+
-							 '</div>';
 		var markerF = new google.maps.Marker({
 			position: new google.maps.LatLng(-36.672756, 146.262081),
 			map: map,
-			title:"15 Mile Creek Campus"
+			title:"15 Mile Creek Campus",
 		});
 		google.maps.event.addListener(markerF, 'click', function() {
-			infowindow.setContent(contentStringF);
-			infowindow.open(map,markerF);
+			window.location.href = '#fifteenMileCreek';
 		});
 
 		// Bogong
-		var contentStringB = '<div id="content">'+
-							 '<h1 id="firstHeading" class="firstHeading">Bogong Campus</h1>'+
-							 '</div>';
 		var markerB = new google.maps.Marker({
 			position: new google.maps.LatLng(-36.80407, 147.225648),
 			map: map,
 			title:"Bogong Campus"
 		});
 		google.maps.event.addListener(markerB, 'click', function() {
-			infowindow.setContent(contentStringB);
-			infowindow.open(map,markerB);
+			window.location.href = '#bogong';
 		});
 
 		// Nayook
-		var contentStringN = '<div id="content">'+
-							 '<h1 id="firstHeading" class="firstHeading">Nayook Campus</h1>'+
-							 '</div>';
 		var markerN = new google.maps.Marker({
 			position: new google.maps.LatLng(-37.898808, 145.916387),
 			map: map,
 			title:"Nayook Campus"
 		});
 		google.maps.event.addListener(markerN, 'click', function() {
-			infowindow.setContent(contentStringN);
-			infowindow.open(map,markerN);
+			window.location.href = '#nayook';
 		});
 
 		// Thornton
-		var contentStringR = '<div id="content">'+
-							 '<h1 id="firstHeading" class="firstHeading">Thornton Campus</h1>'+
-							 '</div>';
 		var markerR = new google.maps.Marker({
 			position: new google.maps.LatLng(-37.295291, 145.822048),
 			map: map,
 			title:"Thornton Campus"
 		});
 		google.maps.event.addListener(markerR, 'click', function() {
-			infowindow.setContent(contentStringR);
-			infowindow.open(map,markerR);
+			window.location.href = '#thornton';
 		});
 
 		// Somers
-		var contentStringS = '<div id="content">'+
-							 '<h1 id="firstHeading" class="firstHeading">Somers Campus</h1>'+
-							 '</div>';
 		var markerS = new google.maps.Marker({
 			position: new google.maps.LatLng(-38.290038, 145.075364),
 			map: map,
 			title:"Somers Campus"
 		});
 		google.maps.event.addListener(markerS, 'click', function() {
-			infowindow.setContent(contentStringS);
-			infowindow.open(map,markerS);
+			window.location.href = '#somers';
 		});
 
 		// Woorabinda
-		var contentStringW = '<div id="content">'+
-							 '<h1 id="firstHeading" class="firstHeading">Woorabinda Campus</h1>'+
-							 '</div>';
 		var markerW = new google.maps.Marker({
 			position: new google.maps.LatLng(-38.15582, 146.31448),
 			map: map,
 			title:"Woorabinda Campus"
 		});
 		google.maps.event.addListener(markerW, 'click', function() {
-			infowindow.setContent(contentStringW);
-			infowindow.open(map,markerW);
+			window.location.href = '#woorabinda';
 		});
 
 	}
