@@ -247,38 +247,28 @@ body {
 	right: 10%;
 	top: 10%;
 }
-.content {
-	margin-bottom: 3em;
-}
-.content > div {
-	margin-bottom: 4.5em;
-}
 .content header {
 	border-left: .1875em solid #8ec641;
 	margin-bottom: 3em;
 	padding-left: 1.3125em;
 }
-.content ul {
+.content > ul {
 	list-style: none;
 }
-.content li {
-	border-left: .1875em solid #d6d6d6;
-	margin-bottom: 3em;
-	padding-left: 2.5%;
-}
 .column {
+	border-left: .1875em solid #d6d6d6;
 	display: inline-block;
+	margin-bottom: 6em;
+	margin-left: 2.5%;
+	padding-left: 2.5%;
 	text-align: left;
-	width: 48.5%;
+	width: 47.5%;
 	vertical-align: top;
 	zoom: 1;
 	*display: inline;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 			box-sizing: border-box;
-}
-.column + .column {
-	margin-left: 2.5%;
 }
 .contact {
 	margin-bottom: 1.5em;
@@ -294,7 +284,10 @@ body {
 /* Footer */
 
 footer[role="contentinfo"] {
-	padding-bottom: 3em;
+	padding-bottom: 4.5em;
+}
+footer .limit-width {
+	max-width: 986px;
 }
 
 /* Additional Styles ****************************************************************************************************************************/
@@ -382,10 +375,8 @@ dt.hovered:before {
 		margin-bottom: 3em;
 	}
 	.column {
-		width: 100%;
-	}
-	.column + .column {
 		margin-left: 0;
+		width: 100%;
 	}
 	.content header {
 		border: 0;
