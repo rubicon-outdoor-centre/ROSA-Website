@@ -48,7 +48,7 @@
 
 	<div class="banner-image">
 		<div class="description limit-width">
-			<p>With 6 campuses across the state, the ROSA schools provide affordable high quality educational programs for DEECD schools that empower their students to develop beliefs, values, attitudes and behaviours that will lead to sustainable living. Students achieve success through a unique personalised learning journey and within a small community living in a healthy, happy and safe environment.</p>
+			<p>With 7 campuses across the state, the ROSA schools provide affordable high quality educational programs for DEECD schools that empower their students to develop beliefs, values, attitudes and behaviours that will lead to sustainable living. Students achieve success through a unique personalised learning journey and within a small community living in a healthy, happy and safe environment.</p>
 		</div>
 	</div>
 </header>
@@ -109,7 +109,7 @@
 		<ul>
 			<li class="column" id="nayook">
 				<h5><a href="http://www.rubicon.vic.edu.au/nayook/campus" target="_blank">Nayook Campus</a></h5>
-				<p>Located within the magnificent rolling hills of Gippsland, 30 km north of Warragul.</p>
+				<p>Located within the magnificent rolling hills of Gippsland, 30 km North of Warragul.</p>
 				<dl class="contact">
 					<dt class="phone">Phone:</dt>
 					<dd>(03) 5628 4210</dd>
@@ -151,7 +151,7 @@
 		<ul>
 			<li class="column" id="somers">
 				<h5><a href="http://www.somerscamp.vic.edu.au" target="_blank">Somers Campus</a></h5>
-				<p>Located on the shores of Westernport on the Mornington Peninsula south east of Melbourne.</p>
+				<p>Located on the shores of Westernport on the Mornington Peninsula, South Wast of Melbourne.</p>
 				<dl class="contact">
 					<dt class="phone">Phone:</dt>
 					<dd>(03) 5983 5302</dd>
@@ -181,12 +181,39 @@
 			</li>
 		</ul>
 	</div>
+
+	<div class="limit-width">
+		<header>
+			<hgroup>
+				<h3><a href="http://www.blackwoodssoec.vic.edu.au" target="_blank">Blackwood Outdoor Education Centre</a></h3>
+				<h4>Special School</h4>
+			</hgroup>
+		</header>
+
+		<ul>
+			<li class="column" id="blackwood">
+				<h5><a href="http://www.blackwoodssoec.vic.edu.au" target="_blank">Blackwood Campus</a></h5>
+				<p>Located within the Wombat State Forest, North West of Melbourne.</p>
+				<dl class="contact">
+					<dt class="phone">Phone:</dt>
+					<dd>(03) 5368 6768</dd>
+					<dt class="fax">Fax:</dt>
+					<dd>(03) 5368 6835</dd>
+					<dt class="email">Email:</dt>
+					<dd><a href="mailto:blackwood.specialschools.oec@edumail.vic.gov.au">blackwood.specialschools.oec@edumail.vic.gov.au</a></dd>
+					<dt class="web">Web:</dt>
+					<dd><a href="http://www.blackwoodssoec.vic.edu.au" target="_blank">http://www.blackwoodssoec.vic.edu.au/</a></dd>
+				</dl>
+				<iframe class="map" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=1015+Greendale++Trentham+Forest+Road,Blackwood,Victoria,Australia&key=AIzaSyAlgnVcl23J8fNhxB8SVGiFGCpXhwtAojY&zoom=11"></iframe>
+			</li>
+		</ul>
+	</div>
 </div>
 
 <footer role="contentinfo">
 	<div class="limit-width">
 		<a href="http://www.education.vic.gov.au/"><img src="images/deecd.jpg" alt="Victoria Logo"></a>
-		<p>&copy; 2011&ndash;<script>document.write(new Date().getFullYear())</script><noscript>2014</noscript> ROSA</p>
+		<p>&copy; 2011&ndash;<script>document.write(new Date().getFullYear())</script><noscript>2015</noscript> ROSA</p>
 	</div>
 </footer>
 
@@ -315,6 +342,15 @@
 			window.location.href = '#woorabinda';
 		});
 
+		// Blackwood
+		var markerL = new google.maps.Marker({
+			position: new google.maps.LatLng(-37.476778, 144.304873),
+			map: map,
+			title:"Blackwood Campus"
+		});
+		google.maps.event.addListener(markerL, 'click', function() {
+			window.location.href = '#blackwood';
+		});
 	}
 
 	function loadScript() {
