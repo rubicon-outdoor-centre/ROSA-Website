@@ -174,7 +174,7 @@ dl {
 }
 .description p {
 	color: #fff;
-	font-size: 1.75em;
+	font-size: 2.25em;
 	font-style: italic;
 	line-height: 1.75em;
 	margin-bottom: 0;
@@ -182,7 +182,7 @@ dl {
 }
 .description p:before {
 	color: hsla(0,0%,100%,.25);
-	content: '“';
+	content: '\2018';
 	font-size: 2em;
 	left: -.1em;
 	line-height: .25em;
@@ -191,7 +191,7 @@ dl {
 }
 .description p:after {
 	color: hsla(0,0%,100%,.25);
-	content: '”';
+	content: '\2019';
 	font-size: 2em;
 	line-height: .25em;
 	position: relative;
@@ -216,6 +216,8 @@ footer[role="contentinfo"] p {
 	font-family: 'museo-sans', sans-serif;
 	font-size: .75em;
 	line-height: 3.33333333em;
+	margin-bottom: 0;
+	margin-top: 1.5em;
 }
 
 /* Layout **********************************************************************************************************************************/
@@ -247,28 +249,41 @@ body {
 	right: 10%;
 	top: 10%;
 }
+.content {
+	margin-bottom: 3em;
+}
+.content > div {
+	margin-bottom: 3em;
+}
 .content header {
 	border-left: .1875em solid #8ec641;
 	margin-bottom: 3em;
 	padding-left: 1.3125em;
 }
-.content > ul {
+.content ul {
 	list-style: none;
+}
+.content li {
+	border-left: .1875em solid #d6d6d6;
+	margin-bottom: 3em;
+	padding-left: 2.5%;
 }
 .column {
 	border-left: .1875em solid #d6d6d6;
 	display: inline-block;
 	margin-bottom: 6em;
-	margin-left: 2.5%;
 	padding-left: 2.5%;
 	text-align: left;
-	width: 47.5%;
+	width: 48.5%;
 	vertical-align: top;
 	zoom: 1;
 	*display: inline;
 	-webkit-box-sizing: border-box;
 	   -moz-box-sizing: border-box;
 			box-sizing: border-box;
+}
+.column + .column {
+	margin-left: 2.5%;
 }
 .contact {
 	margin-bottom: 1.5em;
@@ -287,7 +302,7 @@ footer[role="contentinfo"] {
 	padding-bottom: 4.5em;
 }
 footer .limit-width {
-	max-width: 986px;
+	max-width: 1040px;
 }
 
 /* Additional Styles ****************************************************************************************************************************/
@@ -375,8 +390,10 @@ dt.hovered:before {
 		margin-bottom: 3em;
 	}
 	.column {
-		margin-left: 0;
 		width: 100%;
+	}
+	.column + .column {
+		margin-left: 0;
 	}
 	.content header {
 		border: 0;
@@ -417,25 +434,31 @@ dt.hovered:before {
 		width: 100%;
 	}
 }
-@media (max-width: 80em) {
+@media (max-width: 82em) {
+
+	.description p {
+		font-size: 2em;
+	}
+}
+@media (max-width: 73em) {
+
+	.description p {
+		font-size: 1.75em;
+	}
+}
+@media (max-width: 64em) {
 
 	.description p {
 		font-size: 1.5em;
 	}
 }
-@media (max-width: 65em) {
+@media (max-width: 56em) {
 
 	.description p {
 		font-size: 1.25em;
 	}
 }
-@media (max-width: 55em) {
-
-	.description p {
-		font-size: 1em;
-	}
-}
-@media (max-width: 45em) {
+@media (max-width: 47em) {
 
 	.banner-image {
 		padding-bottom: 30%;
