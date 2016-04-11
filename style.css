@@ -183,10 +183,11 @@ dl {
     border: 2px solid #fff;
     color: #fff !important;
     display: inline-block;
+    font-family: 'museo-sans', sans-serif;
     font-size: 1.25em;
     font-weight: bold;
     margin-top: 3em;
-    padding: .775em 2.25em .75em;
+    padding: .75em 2.25em;
     text-transform: uppercase;
     vertical-align: top;
     -webkit-transition: .25s;
